@@ -20,7 +20,12 @@ int main(void)
     print_size("int8_t",        sizeof(int8_t));
     print_size("int16_t",       sizeof(int16_t));
     print_size("int32_t",       sizeof(int32_t));
+
+    // int64_t is optional
+#indef UINT64_MAX
     print_size("int64_t",       sizeof(int64_t));
+#endif
+
     printf("\n");
     print_size("int_fast8_t",   sizeof(int_fast8_t));
     print_size("int_fast16_t",  sizeof(int_fast16_t));
