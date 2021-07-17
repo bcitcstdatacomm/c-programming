@@ -48,7 +48,7 @@ int main(void)
 
 static void print_bytes(uint8_t bytes[static 4], size_t count)
 {
-    for(int i = 0; i < count; i++)
+    for(size_t i = 0; i < count; i++)
     {
         printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(bytes[i]));
     }
