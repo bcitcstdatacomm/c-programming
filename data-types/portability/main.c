@@ -17,44 +17,41 @@
   ((byte) & 0x01 ? '1' : '0')
 
 
-static void print_bytes(uint8_t bytes[static 4]);
+static void print_bytes(uint8_t bytes[static 4], size_t count);
 
 
 int main(void)
 {
     union
     {
-        int32_t value;
+        int16_t value16;
+        int32_t value32;
         uint8_t bytes[4];
     } data;
 
     // 0001000 00000100 00000010 00000001
     // 0x08 04 02 01
-    data.value = 0x08040201;
-
-    if(data.bytes[0] == 1)
-    {
-        printf("Big Endian\n");
-    }
-    else
-    {
-        printf("Little Endian\n");
-    }
+    data.value32 = 0x08040201;
 
     printf("\n");
-    print_bytes(data.bytes);
-    data.value = htonl(data.value);
-    print_bytes(data.bytes);
+    print_bytes(data.bytes, 4);
+    data.value32 = htonl(data.value32);
+    print_bytes(data.bytes, 4);
+    data.value16 = 0x0201;
+    print_bytes(data.bytes, 2);
+    data.value16 = htons(data.value16);
+    print_bytes(data.bytes, 2);
 
     return EXIT_SUCCESS;
 }
 
 
-static void print_bytes(uint8_t bytes[static 4])
+static void print_bytes(uint8_t bytes[static 4], size_t count)
 {
-    printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(bytes[0]));
-    printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(bytes[1]));
-    printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(bytes[2]));
-    printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(bytes[3]));
+    for(int i = 0; i < count; i++)
+    {
+        printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(bytes[i]));
+    }
+
     printf("--------\n");
 }

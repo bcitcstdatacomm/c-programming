@@ -22,7 +22,7 @@ int main(void)
     print_size("int32_t",       sizeof(int32_t));
 
     // int64_t is optional
-#indef UINT64_MAX
+#ifdef UINT64_MAX
     print_size("int64_t",       sizeof(int64_t));
 #endif
 
