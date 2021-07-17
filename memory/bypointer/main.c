@@ -19,7 +19,7 @@ int main(void)
 
 static void display(int *value)
 {
-    printf("[%p] = %p\n", (void *)&value, value);
+    printf("[%p] = %p\n", (void *)&value, (void*)value);
     printf("[%p] = %d\n", (void *)value, *value);
     *value = 6;
 }

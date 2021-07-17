@@ -19,7 +19,7 @@ int main(void)
     printf("c = [%p]\n", (void *)&c);
     printf("d = [%p]\n", (void *)&d);
     printf("e = [%p]\n", (void *)&e);
-    printf("[%p]\n", (void *)"Hello, World!");
+    printf("[%p]\n", (const void *)"Hello, World!");
 
     return EXIT_SUCCESS;
 }

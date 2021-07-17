@@ -33,9 +33,9 @@ int main(void)
 
     printf("long long:\n");
     printf("\tbits:          %zu\n",  sizeof(long long) * CHAR_BIT);
-    printf("\tsigned min:    %lld\n", LONG_LONG_MIN);
-    printf("\tsigned min:    %lld\n", LONG_LONG_MAX);
-    printf("\tunsigned max:  %llu\n", ULONG_LONG_MAX);
+    printf("\tsigned min:    %lld\n", LLONG_MIN);
+    printf("\tsigned min:    %lld\n", LLONG_MAX);
+    printf("\tunsigned max:  %llu\n", ULLONG_MAX);
 
     printf("int8_t:\n");
     printf("\tbits:          %zu\n",        sizeof(int8_t) * CHAR_BIT);

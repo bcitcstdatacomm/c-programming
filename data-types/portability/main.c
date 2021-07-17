@@ -24,8 +24,8 @@ int main(void)
 {
     union
     {
-        int16_t value16;
-        int32_t value32;
+        uint16_t value16;
+        uint32_t value32;
         uint8_t bytes[4];
     } data;
 

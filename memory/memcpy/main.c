@@ -3,16 +3,16 @@
 #include <string.h>
 
 
-#define SIZE 10
-
-
 int main(void)
 {
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wpadded"
     struct data
     {
         char c;
         int i;
     };
+#pragma GCC diagnostic pop
 
     struct data a;
     struct data b;
