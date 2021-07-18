@@ -1,7 +1,7 @@
-#include <stdlib.h>
+#include <arpa/inet.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <arpa/inet.h>
+#include <stdlib.h>
 
 
 // warning - make sure you are shifting with unsigned values only!
