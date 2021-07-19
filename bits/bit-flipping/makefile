@@ -11,7 +11,7 @@ ifeq (run,$(firstword $(MAKECMDGOALS)))
 endif
 
 .PHONY: all
-all: $(BINARY)
+all: lint $(BINARY)
 
 .PHONY: tester
 $(BINARY) : $(OBJECTS)
@@ -21,7 +21,7 @@ $(OBJECTS):
 
 .PHONY: lint
 lint:
-	$(LINT) $(LINTFLAGS) $(SOURCES)
+	$(LINT) $(LINTFLAGS) $(SOURCES) --
 
 .PHONY: clean
 clean:

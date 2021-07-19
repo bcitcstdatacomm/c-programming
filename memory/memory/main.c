@@ -1,7 +1,7 @@
 #include <stdbool.h>
-#include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 
 // https://stackoverflow.com/questions/111928/is-there-a-printf-converter-to-print-in-binary-format

@@ -1,7 +1,6 @@
-#include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <arpa/inet.h>
+#include <stdlib.h>
 
 //             1
 //             2631

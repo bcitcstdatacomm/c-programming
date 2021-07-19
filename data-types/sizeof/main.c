@@ -1,7 +1,7 @@
 #include <stdbool.h>
-#include <stdlib.h>
 #include <stdint.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 
 static void print_size(const char *type_name, size_t bytes);
