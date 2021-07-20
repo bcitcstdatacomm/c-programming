@@ -6,17 +6,18 @@
 // https://stackoverflow.com/questions/111928/is-there-a-printf-converter-to-print-in-binary-format
 #define BYTE_TO_BINARY_PATTERN "%c%c%c%c%c%c%c%c"
 #define BYTE_TO_BINARY(byte)   \
-  ((byte) & 0x80 ? '1' : '0'), \
-  ((byte) & 0x40 ? '1' : '0'), \
-  ((byte) & 0x20 ? '1' : '0'), \
-  ((byte) & 0x10 ? '1' : '0'), \
-  ((byte) & 0x08 ? '1' : '0'), \
-  ((byte) & 0x04 ? '1' : '0'), \
-  ((byte) & 0x02 ? '1' : '0'), \
-  ((byte) & 0x01 ? '1' : '0')
+  ((byte) & 0x80U ? '1' : '0'), \
+  ((byte) & 0x40U ? '1' : '0'), \
+  ((byte) & 0x20U ? '1' : '0'), \
+  ((byte) & 0x10U ? '1' : '0'), \
+  ((byte) & 0x08U ? '1' : '0'), \
+  ((byte) & 0x04U ? '1' : '0'), \
+  ((byte) & 0x02U ? '1' : '0'), \
+  ((byte) & 0x01U ? '1' : '0')
 
 
 static void print_bytes(uint8_t bytes[static 4]);
+static void print_byte(uint8_t byte);
 
 
 int main(void)
@@ -49,9 +50,14 @@ int main(void)
 
 static void print_bytes(uint8_t bytes[static 4])
 {
-    printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(bytes[0]));
-    printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(bytes[1]));
-    printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(bytes[2]));
-    printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(bytes[3]));
+    print_byte(bytes[0]);
+    print_byte(bytes[1]);
+    print_byte(bytes[2]);
+    print_byte(bytes[3]);
     printf("--------\n");
+}
+
+static void print_byte(uint8_t byte)
+{
+    printf(BYTE_TO_BINARY_PATTERN "\n", BYTE_TO_BINARY(byte));
 }

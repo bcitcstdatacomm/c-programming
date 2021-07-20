@@ -12,6 +12,7 @@ int main(void)
 
     for(size_t i = 0; i < SIZE; i++)
     {
+        // NOLINTNEXTLINE(clang-analyzer-core.CallAndMessage)
         printf("%d\n", values[i]);
     }
 

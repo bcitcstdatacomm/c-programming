@@ -16,6 +16,7 @@ int main(void)
     // may or may not be zero
     for(size_t i = 0; i < SIZE; i++)
     {
+        // NOLINTNEXTLINE(clang-analyzer-core.CallAndMessage)
         printf("%d\n", random_values[i]);
     }
 
