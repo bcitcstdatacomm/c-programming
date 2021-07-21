@@ -17,7 +17,7 @@ lint:
 
 .PHONY: clean
 clean:
-	$(RM) $(BINARY) $(OBJECTS)
+	rm -f $(BINARY) $(OBJECTS)
 
 .PHONY: run
 run: tester
