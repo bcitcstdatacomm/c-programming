@@ -4,7 +4,7 @@ compile()
 {
   echo "Building $1/$2"
   pushd "$2" > /dev/null || exit
-  make clean all
+  make clean all || exit
   popd > /dev/null || exit
 }
 
