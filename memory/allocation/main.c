@@ -10,10 +10,10 @@ int main(void)
     int *random_values;
     int *zero_values;
 
-    random_values = malloc(1000 * sizeof(int));
+    random_values = malloc(10 * sizeof(int));
     zero_values   = calloc(10, sizeof(int));
 
-    // may or may not be zero
+    // may or may not be zero, depends on the platform
     for(size_t i = 0; i < SIZE; i++)
     {
         // NOLINTNEXTLINE(clang-analyzer-core.CallAndMessage)
@@ -22,7 +22,7 @@ int main(void)
 
     printf("----\n");
 
-    // 100% guaranteed to be 0
+    // 100% guaranteed to be 0 no matter what the platform is
     for(size_t i = 0; i < SIZE; i++)
     {
         printf("%d\n", zero_values[i]);

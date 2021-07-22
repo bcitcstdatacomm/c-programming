@@ -63,32 +63,6 @@ int main(void)
     printf("\tunsigned max:  %" PRIu64 "\n", UINT64_MAX);
 #endif
 
-    printf("int8_t:\n");
-    printf("\tbits:          %zu\n",        sizeof(int8_t) * CHAR_BIT);
-    printf("\tsigned min:    %" PRId8 "\n", (int8_t)INT8_MIN);
-    printf("\tsigned min:    %" PRId8 "\n", (int8_t)INT8_MAX);
-    printf("\tunsigned max:  %" PRIu8 "\n", (int8_t)UINT8_MAX);
-
-    printf("int16_t:\n");
-    printf("\tbits:          %zu\n",         sizeof(int16_t) * CHAR_BIT);
-    printf("\tsigned min:    %" PRId16 "\n", (int16_t)INT16_MIN);
-    printf("\tsigned min:    %" PRId16 "\n", (int16_t)INT16_MAX);
-    printf("\tunsigned max:  %" PRIu16 "\n", (int16_t)UINT16_MAX);
-
-    printf("int32_t:\n");
-    printf("\tbits:          %zu\n",         sizeof(int32_t) * CHAR_BIT);
-    printf("\tsigned min:    %" PRId32 "\n", INT32_MIN);
-    printf("\tsigned min:    %" PRId32 "\n", INT32_MAX);
-    printf("\tunsigned max:  %" PRIu32 "\n", UINT32_MAX);
-
-#ifdef UINT64_MAX
-    printf("int64_t:\n");
-    printf("\tbits:          %zu\n",         sizeof(int64_t) * CHAR_BIT);
-    printf("\tsigned min:    %" PRId64 "\n", INT64_MIN);
-    printf("\tsigned min:    %" PRId64 "\n", INT64_MAX);
-    printf("\tunsigned max:  %" PRIu64 "\n", UINT64_MAX);
-#endif
-
     printf("int_least8_t:\n");
     printf("\tbits:          %zu\n",             sizeof(int_least8_t) * CHAR_BIT);
     printf("\tsigned min:    %" PRIdLEAST8 "\n", (int_least8_t)INT_LEAST8_MIN);
