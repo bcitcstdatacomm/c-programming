@@ -8,7 +8,7 @@ int main(void)
     unsigned char byte;
     unsigned char flipped;
 
-    // 00001111 = 15
+    // 00001111 = 150
     byte = 15;
     // 11110000 = 240
     flipped = ~byte;

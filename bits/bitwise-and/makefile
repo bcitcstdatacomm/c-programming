@@ -1,5 +1,3 @@
-.POSIX:
-
 SOURCES = main.c
 OBJECTS = main.o
 BINARY = tester
