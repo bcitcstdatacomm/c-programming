@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+// #include <iso646.h>
 
 
 // warning - there can be issues performing bitwise operations on signed values.
@@ -19,6 +20,7 @@ int main(void)
     byteA       = 11;
     byteB       = 14;
     differences = byteA & byteB;
+//    differences = byteA bitand byteB; // bitand is the same as &
     printf("%02o %02u %02X\n", byteA, byteA, byteA);
     printf("&\n");
     printf("%02o %02u %02X\n", byteB, byteB, byteB);

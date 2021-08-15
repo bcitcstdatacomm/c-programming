@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <iso646.h>
 
 
 // warning - there can be issues performing bitwise operations on signed values.
@@ -16,6 +17,7 @@ int main(void)
 
     byteA       = 11;
     differences = ~byteA;
+    //    differences = compl byteA; // compl is the same as ~
     printf("~\n");
     printf("%03o %03u %02X\n", byteA, byteA, byteA);
     printf("--- --- --\n");
