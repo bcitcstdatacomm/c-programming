@@ -1,19 +1,19 @@
 #include "child.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 
 int main(int argc, char *argv[])
 {
-    struct parent *object;
+    struct parent a;
+    struct child  b;
 
-    parent_setup();
-    child_setup();
+    a.str       = "Hello";
+    b.super.str = "Hello";
+    b.value     = 42;
 
-    object = malloc(sizeof(struct child));
-    child_init((struct child *)object, "abc", 123);
-    parent_say_hello(object);
-    child_destroy((struct child *)object);
-    free(object);
+    printf("a: %s\n", a.str);
+    printf("b: %s %d\n", b.super.str, b.value);
 
     return EXIT_SUCCESS;
 }

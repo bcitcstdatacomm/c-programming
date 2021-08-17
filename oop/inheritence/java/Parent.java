@@ -1,11 +1,4 @@
-public abstract class Parent
+public class Parent
 {
-    protected String str;
-
-    protected Parent(final String s)
-    {
-        str = s;
-    }
-
-    public abstract void sayHello();
+    public String str;
 }

@@ -3,16 +3,16 @@ public class Main
     public static void main(final String[] argv)
     {
         Parent a;
-        Parent b;
+        Child  b;
 
-        a = new Child("abc", 1);
-        b = new Child("def", 2);
+        a = new Parent();
+        b = new Child();
 
-        System.out.println()
-    }
+        a.str   = "Hello";
+        b.str   = "World";
+        b.value = 42;
 
-    private static void run(final Parent obj)
-    {
-        obj.sayHello();
+        System.out.printf("a: %s%n", a.str);
+        System.out.printf("b: %s %d%n", b.str, b.value);
     }
 }

@@ -1,5 +1,5 @@
-SOURCES = main.cpp
-OBJECTS = main.o
+SOURCES = main.c clazz.c
+OBJECTS = main.o clazz.o
 BINARY = tester
 
 .PHONY: all
@@ -7,7 +7,7 @@ all: $(BINARY)
 
 .PHONY: tester
 $(BINARY) : $(OBJECTS)
-	$(CXX) -o $(BINARY) $(LDFLAGS) $(LDLIBS) $(OBJECTS)
+	$(CC) -o $(BINARY) $(LDFLAGS) $(LDLIBS) $(OBJECTS)
 
 $(OBJECTS):
 

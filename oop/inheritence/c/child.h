@@ -12,9 +12,4 @@ struct child
 };
 
 
-void child_setup(void);
-void child_init(struct child *this, const char *str, int val);
-void child_destroy(struct child *this);
-
-
 #endif // C_PROGRAMMING_CHILD_H

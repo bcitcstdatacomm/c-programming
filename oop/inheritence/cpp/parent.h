@@ -7,19 +7,12 @@
 
 class parent
 {
-protected:
+public:
     std::string str;
-    parent(std::string str);
 
 public:
     virtual ~parent();
-    virtual void sayHello() const = 0;
 };
-
-
-inline parent::parent(std::string str) : str(str)
-{
-}
 
 
 inline parent::~parent()
