@@ -2,6 +2,7 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,windows,intellij+all,visualstudiocode,visualstudio,emacs,cmake,valgrind
 
 *.o
+*.class
 tester
 
 ### CMake Patch ###

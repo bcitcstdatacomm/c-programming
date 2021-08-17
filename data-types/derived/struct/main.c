@@ -62,6 +62,7 @@ static void display(struct data *object)
     printf("%s: %d\n", object->str, object->value);
 }
 
+
 static void change(struct data *object, const char *str, int value)
 {
     object->str   = str;

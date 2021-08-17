@@ -2,13 +2,6 @@
 #include <stdlib.h>
 
 
-enum type
-{
-    CHAR_POINTER,
-    INT,
-};
-
-
 union data
 {
     const char *str;

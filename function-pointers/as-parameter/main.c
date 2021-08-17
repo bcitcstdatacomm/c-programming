@@ -4,7 +4,7 @@
 
 static int add(int a, int b);
 static int subtract(int a, int b);
-static void calculate(int a, int b, int (*operator)(int a, int b));
+static void calculate(int a, int b, int (*perform)(int a, int b));
 
 
 int main(void)
@@ -28,10 +28,10 @@ static int subtract(int a, int b)
 }
 
 
-static void calculate(int a, int b, int (*operator)(int a, int b))
+static void calculate(int a, int b, int (*perform)(int a, int b))
 {
     int result;
 
-    result = operator(a, b);
+    result = perform(a, b);
     printf("%d\n", result);
 }
