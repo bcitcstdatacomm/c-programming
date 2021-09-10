@@ -2,17 +2,23 @@ public class Main
 {
     public static void main(final String[] argv)
     {
-        Clazz a;
-        Clazz b;
+        foo("Hello, World!");
+        foo(10);
+        foo(123.4f);
+    }
 
-        a = new Clazz(5);
-        b = new Clazz(6);
-        System.out.printf("%d%n", a.getValue());
-        System.out.printf("%d%n", b.getValue());
+    private static void foo(int value)
+    {
+        System.out.printf("int: %d%n", value);
+    }
 
-        a.setValue(10);
-        b.setValue(20);
-        System.out.printf("%d%n", a.getValue());
-        System.out.printf("%d%n", b.getValue());
+    private static void foo(float value)
+    {
+        System.out.printf("float: %f%n", value);
+    }
+
+    private static void foo(String value)
+    {
+        System.out.printf("string: %s%n", value);
     }
 }

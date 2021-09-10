@@ -1,5 +1,5 @@
-SOURCES = Main.java Clazz.java
-OBJECTS = Main.class Clazz.class
+SOURCES = Main.java
+OBJECTS = Main.class
 BINARY  = Main
 
 JFLAGS = -g
