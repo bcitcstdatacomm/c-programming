@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <arpa/inet.h>
 
 
 // https://stackoverflow.com/questions/111928/is-there-a-printf-converter-to-print-in-binary-format
@@ -34,14 +35,15 @@ int main(void)
 
     if(data.bytes[0] == 1)
     {
-        printf("Big Endian\n");
+        printf("Little Endian\n");
     }
     else
     {
-        printf("Little Endian\n");
+        printf("Big Endian\n");
     }
 
     printf("\n");
+//    data.value = htonl(data.value);
     print_bytes(data.bytes);
 
     return EXIT_SUCCESS;
