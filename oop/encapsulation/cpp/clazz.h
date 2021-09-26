@@ -29,7 +29,7 @@ inline void clazz::set_value(int val)
 
 inline int clazz::get_value()
 {
-    return value;
+    return this.value;
 }
 
 #endif //C_PROGRAMMING_PARENT_H
